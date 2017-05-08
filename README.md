@@ -11,6 +11,12 @@ Converts *.gun files to Go files.
 This project simplifies web development similar to JSP and PHP. The Templates are compiled into the Executable and technically performs better than the typical parsed templates.
 It uses the Echo Framework - https://github.com/labstack/echo
 
+The project is in its infancy stage. I am planing to add support for better Scriplet, Expressions and Directives sans the Expression language.
+The second stage would be supporting seamless auto project building eg rebuilding on every change.
+
+Im open for feedback and contribution.
+
+
 Getting Started
 
 1. Build the code. go build gspro.go, it creates an executable eg gspro.exe
