@@ -8,7 +8,8 @@ Converts *.gun files to Go files.
   process <searchDir> <prefixDir> <outputDir>
     Processes *.gun files recursively & creates *.go files in outputDir
 
-This project simplifies web development similar to JSP and PHP. The Templates are compiled into the Executable and technically performs better than the typical parsed templates.
+This project simplifies web development similar to JSP and PHP. The Templates are compiled into the Executable and technically performs better than the typical parsed templates. The result is a web server with route maps with GET and POST methods to the Template.
+
 It uses the Echo Framework - https://github.com/labstack/echo
 (Install Echo with $ go get -u github.com/labstack/echo)
 
