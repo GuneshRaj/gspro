@@ -43,5 +43,21 @@ Building your project
 7. Route Maps are generally using the filename, eg av.gun is mapped to /av and uses the method func av_gun(c echo.Context) error
 8. Package name is main
 
+Example
+
+<%
+    s := "World!"
+
+%>
+Hello <% WriteStr(c, s) %>
+
+<%
+i := 4
+%>
+You are <% WriteInt(c, i) %> billion years old.
+
+
+
+
 
 
