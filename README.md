@@ -125,3 +125,19 @@ func WriteInt(c echo.Context, s int) {
 
 ```
 
+Init Page
+
+[main.go]
+```
+package main
+
+import (
+	"github.com/labstack/echo"
+)
+
+func main() {
+	e := echo.New()
+	routeMap(e)
+	e.Logger.Fatal(e.Start(":1323"))
+}
+```
