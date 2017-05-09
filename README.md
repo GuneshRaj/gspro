@@ -47,6 +47,7 @@ Building your project
 Example
 
 [av.gun]
+```
 <%
     s := "World!"
 
@@ -57,10 +58,12 @@ Hello <% WriteStr(c, s) %>
 i := 4
 %>
 You are <% WriteInt(c, i) %> billion years old.
+```
 
 Compiles to
 
 [av_gun.go]
+```
 package main
 
 import (
@@ -95,8 +98,10 @@ WriteStr(c, ` billion years old.
 	c.Response().WriteHeader(http.StatusOK)
 	return nil
 }
+```
 
 [routemap.go]
+```
 package main
 
 import (
@@ -118,5 +123,5 @@ func WriteInt(c echo.Context, s int) {
 	c.Response().Writer.Write([]byte(strconv.Itoa(s)))
 }
 
-
+```
 
