@@ -23,7 +23,7 @@ Getting Started
 
 1. Build the code. go build gspro.go, it creates an executable eg gspro.exe
 2. Create a new project folder eg \demo\testproject\
-3. Copy gspro.exe to the project folder or add the executable to the system path
+3. Copy gspro.exe to the project folder or add the executable to the system path (or a go install)
 4. Run gspro.exe init while in the project folder
 
 Creating your Go Server Pages
