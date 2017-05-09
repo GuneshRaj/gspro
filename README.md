@@ -46,6 +46,7 @@ Building your project
 
 Example
 
+[av.gun]
 <%
     s := "World!"
 
@@ -57,8 +58,65 @@ i := 4
 %>
 You are <% WriteInt(c, i) %> billion years old.
 
+Compiles to
+
+[av_gun.go]
+package main
+
+import (
+	"net/http"
+	"github.com/labstack/echo"
+)
 
 
+func av(c echo.Context) error {
+
+    s := "World"
+
+
+WriteStr(c, `
+Hello `)
+ WriteStr(c, s) 
+WriteStr(c, `
+
+`)
+
+i := 4
+
+WriteStr(c, `
+I am `)
+ WriteInt(c, i) 
+WriteStr(c, ` billion years old.
+
+`)
+
+
+	c.Response().Flush()
+	c.Response().WriteHeader(http.StatusOK)
+	return nil
+}
+
+[routemap.go]
+package main
+
+import (
+	"github.com/labstack/echo"
+	"strconv"
+)
+
+func routeMap(e *echo.Echo) {
+  e.GET("/av", av)
+  e.POST("/av", av)
+}
+
+
+func WriteStr(c echo.Context, s string) {
+	c.Response().Writer.Write([]byte(s))
+}
+
+func WriteInt(c echo.Context, s int) {
+	c.Response().Writer.Write([]byte(strconv.Itoa(s)))
+}
 
 
 
