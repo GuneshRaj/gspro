@@ -63,7 +63,7 @@ You are <% WriteInt(c, i) %> billion years old.
 Compiles to
 
 [av_gun.go]
-```
+```go
 package main
 
 import (
@@ -101,7 +101,7 @@ WriteStr(c, ` billion years old.
 ```
 
 [routemap.go]
-```
+```go
 package main
 
 import (
@@ -128,7 +128,7 @@ func WriteInt(c echo.Context, s int) {
 Init Page
 
 [main.go]
-```
+```go
 package main
 
 import (
